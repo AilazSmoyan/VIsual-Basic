@@ -14,10 +14,7 @@ Module Program
         Console.Write("length=")
         length = Console.ReadLine()
 
-        HLine(leftX, TopY, length)
-        VLine(leftX, TopY, length)
-        HLine(leftX, TopY + length, length)
-        VLine(leftX + length, TopY, length + 1)
+        React(leftX, TopY, length)
 
         Console.WriteLine()
     End Sub
@@ -45,6 +42,12 @@ Module Program
             HLine(leftX, TopY + j, width)
             Console.SetCursorPosition(leftX, TopY + j)
         Next
+    End Sub
 
+    Sub React(leftX As Byte, TopY As Byte, length As Byte)
+        HLine(leftX, TopY, length)
+        VLine(leftX, TopY, length)
+        HLine(leftX, TopY + length, length)
+        VLine(leftX + length, TopY, length + 1)
     End Sub
 End Module
