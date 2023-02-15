@@ -4,6 +4,13 @@ Module Program
     Private brush As Char = "0"c
     Sub Main(args As String())
 
+        Console.WriteLine("ВЫБОР:
+                           1-Нарисовать пустой прямоугольник")
+        Dim N As Integer
+        N = CInt(Console.ReadLine())
+        Select Case N
+            Case 1:
+
         Dim leftX, TopY, length, width As Byte
 
 
@@ -17,6 +24,7 @@ Module Program
         React(leftX, TopY, length)
 
         Console.WriteLine()
+        End Select
     End Sub
 
     Sub HLine(leftX As Byte, TopY As Byte, length As Byte)
