@@ -5,25 +5,27 @@ Module Program
     Sub Main(args As String())
 
         Console.WriteLine("ВЫБОР:
-                           1-Нарисовать пустой прямоугольник")
+                           1-empty rectangle
+                           2-full rectangle
+                           3-Vertical line color Yellow
+                           4-Horizonal line")
         Dim N As Integer
         N = CInt(Console.ReadLine())
         Select Case N
-            Case 1:
-
-        Dim leftX, TopY, length, width As Byte
+            Case 1
 
 
-        Console.Write("leftX=")
-        leftX = Console.ReadLine()
-        Console.Write("TopY=")
-        TopY = Console.ReadLine()
-        Console.Write("length=")
-        length = Console.ReadLine()
 
-        React(leftX, TopY, length)
-
-        Console.WriteLine()
+                React(8, 8, 40)
+            Case 2
+                FilReact(10, 15, 19, 22)
+            Case 3
+                Console.ForegroundColor = ConsoleColor.Yellow
+                VLine(10, 20, 30)
+                Console.ForegroundColor = ConsoleColor.White
+            Case 4
+                HLine(8, 8, 40)
+                Console.WriteLine()
         End Select
     End Sub
 
