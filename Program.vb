@@ -9,14 +9,12 @@ Module Program
                            2-full rectangle
                            3-Vertical line color Yellow
                            4-Horizonal line
-                           5-Abzac line")
+                           5-Abzac line
+                           6-Cells")
         Dim N As Integer
         N = CInt(Console.ReadLine())
         Select Case N
             Case 1
-
-
-
                 React(8, 8, 40)
             Case 2
                 FilReact(10, 15, 19, 22)
