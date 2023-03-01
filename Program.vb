@@ -25,35 +25,17 @@ Module Program
             Case 4
                 HLine(8, 8, 40)
             Case 5
-                HLine(8, 8, 90)
-                HLine(8, 13, 90)
-                HLine(8, 18, 90)
-                HLine(8, 23, 90)
-                HLine(8, 28, 90)
-                HLine(8, 33, 90)
-                HLine(8, 38, 90)
-                HLine(8, 43, 90)
+                For i As Byte = 0 To 6
+                    HLine(8, 8 + i*6, 90)
+                Next
             Case 6
-                VLine(8, 8, 35)
-                VLine(16, 8, 35)
-                VLine(24, 8, 35)
-                VLine(32, 8, 35)
-                VLine(40, 8, 35)
-                VLine(48, 8, 35)
-                VLine(56, 8, 35)
-                VLine(64, 8, 35)
-                VLine(72, 8, 35)
-                VLine(80, 8, 35)
-                VLine(88, 8, 36)
+                For i As Byte = 0 To 8
+                    VLine(8 + i * 10, 8, 37)
+                Next
 
-                HLine(8, 8, 80)
-                HLine(8, 13, 80)
-                HLine(8, 18, 80)
-                HLine(8, 23, 80)
-                HLine(8, 28, 80)
-                HLine(8, 33, 80)
-                HLine(8, 38, 80)
-                HLine(8, 43, 80)
+                For i As Byte = 0 To 6
+                    HLine(8, 8 + i * 6, 80)
+                Next
 
                 Console.WriteLine()
         End Select
