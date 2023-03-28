@@ -1,39 +1,22 @@
 Imports System
 
-Module Module1
+Module Program
     Sub Main(args As String())
-        Dim numbers(6) As Integer
+        Dim t As String
 
-        For i = 0 To numbers.Length - 1
+        Console.WriteLine("Введите время в секундах")
+        t = Console.ReadLine
+        Dim sec As String
+        Dim min As Integer
+        Dim hrs As String
 
-            numbers(i) = Console.ReadLine()
-        Next
 
-        For i = numbers.Length - 1 To 0 Step -1
+        hrs = t \ 3600
+        min = (t - hrs * 3600) \ 60
+        sec = t - hrs * 3600 - min * 60
 
-            Console.WriteLine(numbers(i))
-        Next
-
-        printRevers(numbers)
-
-        Dim Strings(4) As String
-        For i = 0 To Strings.Length - 1
-
-            Strings(i) = Console.ReadLine()
-        Next
-        printRevers(Strings)
-        Console.ReadLine()
-    End Sub
-
-    Sub printRevers(list As Integer())
-        For i = list.Length To 0 Step -1
-            Console.WriteLine(list(i))
-        Next
-    End Sub
-
-    Sub printRevers(list As String())
-        For i = list.Length To 0 Step -1
-            Console.WriteLine(list(i))
-        Next
+        Dim u
+        u = TimeSerial(hrs, min, sec)
+        Console.WriteLine("Результат: {0}", u)
     End Sub
 End Module
