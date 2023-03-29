@@ -12,8 +12,8 @@ Module Program
 
 
         hrs = t \ 3600
-        min = (t - hrs * 3600) \ 60
-        sec = t - hrs * 3600 - min * 60
+        min = (t Mod 3600) \ 60
+        sec = t Mod 60
 
         Dim u
         u = TimeSerial(hrs, min, sec)
