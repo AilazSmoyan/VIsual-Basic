@@ -1,22 +1,23 @@
+
+
+
 Imports System
 
 Module Program
     Sub Main(args As String())
-        Dim t As String
+        Console.WriteLine("Введите ФИО ребенка")
+        Dim a = Console.ReadLine()
 
-        Console.WriteLine("Введите время в секундах")
-        t = Console.ReadLine
-        Dim sec As String
-        Dim min As Integer
-        Dim hrs As String
+        Console.WriteLine("Введите рост ребенка")
+        Dim b = Console.ReadLine()
 
+        Console.WriteLine("Введите вес ребенка")
+        Dim c = Console.ReadLine()
 
-        hrs = t \ 3600
-        min = (t Mod 3600) \ 60
-        sec = t Mod 60
+        Console.WriteLine("Результат: ")
+        Console.WriteLine("ФИО: {0}", a)
+        Console.WriteLine("вес ребенка: {0}", b)
+        Console.WriteLine("Рост Ребенка {0}", c)
 
-        Dim u
-        u = TimeSerial(hrs, min, sec)
-        Console.WriteLine("Результат: {0}", u)
     End Sub
 End Module
